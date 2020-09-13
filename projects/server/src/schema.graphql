@@ -1,0 +1,12 @@
+input QueryStringInput {
+    name: String!
+    id: Int!
+}
+
+type Query {
+    queryString(input: QueryStringInput!): String
+}
+
+schema {
+  query: Query
+}

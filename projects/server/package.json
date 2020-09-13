@@ -1,0 +1,43 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "main": "main.js",
+  "private": true,
+  "vars": {
+    "date": "13",
+    "month": "09",
+    "year": "2020"
+  },
+  "scripts": {
+    "clobber": "shx rm -rf dist",
+    "tslint": "tslint -t verbose -p tsconfig.json -o tslint-error.txt",
+    "build:gen": " graphql-codegen --config codegen.yml",
+    "prebuild": "shx rm -rf dist/ && yarn build:gen",
+    "build": "tsc",
+    "postbuild": "yarn build:docs &&  yarn tslint",
+    "prebuild:docs": " shx rm -rf apis-documentation",
+    "build:docs": "graphdoc -s ./src/schema.graphql -o ./apis-documentation",
+    "test": "node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "13.7.1",
+    "typescript": "4.0.2",
+    "shx": "^0.3.2",
+    "@2fd/graphdoc": "2.4.0",
+    "@graphql-codegen/typescript": "1.12.2",
+    "@graphql-codegen/typescript-resolvers": "1.12.2",
+    "@graphql-codegen/introspection": "1.12.2",
+    "@graphql-codegen/typescript-graphql-request": "1.13.0",
+    "@graphql-codegen/typescript-operations": "1.13.0",
+    "graphql-code-generator": "0.18.2",
+    "@graphql-codegen/cli": "^1.12.2"
+  },
+  "dependencies": {
+    "graphql": "^14.6.0",
+    "express": "4.17.1",
+    "cors": "2.8.5",
+    "express-graphql": "0.9.0",
+    "graphql-import": "1.0.1",
+    "graphql-tools": "4.0.7"
+  }
+}

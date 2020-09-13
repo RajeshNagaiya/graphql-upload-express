@@ -1,0 +1,10 @@
+overwrite: true
+documents: null
+generates:
+  src/generated/appstore.ts:
+    schema: "src/schema.graphql"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-operations"
+
