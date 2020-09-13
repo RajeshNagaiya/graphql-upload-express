@@ -18,14 +18,14 @@
     ]
   },
   "devDependencies": {
-    "cpx": "^1.5.0",
-    "cross-var": "^1.1.0",
-    "http-server": "^0.11.1",
+    "cpx": "1.5.0",
+    "cross-var": "1.1.0",
+    "http-server": "0.11.1",
     "lerna": "^3.22.1",
     "lerna-update-wizard": "0.9.4",
-    "shx": "^0.3.2",
+    "shx": "0.3.2",
     "tslint": "6.1.0",
     "typedoc": "0.13.0",
-    "typescript": "^3.5.3"
+    "typescript": "3.5.3"
   }
 }
