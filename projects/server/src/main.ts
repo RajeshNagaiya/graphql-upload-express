@@ -15,6 +15,7 @@ interface Resolvers {
 const resolvers: Resolvers  = {
   Query: {
     queryString: (root, ctx, req) => {
+      console.log("Server received request::");
       return 'world'
     }
   }

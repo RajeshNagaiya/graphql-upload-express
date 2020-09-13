@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "newLine": "LF",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "stripInternal": true,
+    "outDir" : "./dist",
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ],
+    "declaration": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+  },
+  "exclude": [
+    "./dist"
+  ]
+}
